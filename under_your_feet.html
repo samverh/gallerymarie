@@ -70,19 +70,11 @@
                 <section id="gallery" class="py-5">
                     
                     <h3 class="text-left mb-5 font-weight-light">Under your feet</h3>
-                    <div class="row">
-
-
-                            <div class="col-md-6 p-2">
-                                <div class="card border-0" style="border-radius: 0%;">
-  
-
-                                    <img src="images\004-IMG_20210911_130603.jpg" alt="">
-               
-                                </div>
-                            </div>
-
+                    <div class="row" id="image-container">
+                        <div class="col-md-6" id="column-1"></div>
+                        <div class="col-md-6" id="column-2"></div>
                     </div>
+                    
                     <br>                    
                 </section>
             </div> 
@@ -95,6 +87,42 @@
         <!-- Add your footer content here -->
     </footer>
 </body>
+
+<script>
+    var images = [
+    "0010-IMG_20210301_141832.jpg",
+    "0011-IMG_20221103_125418.jpg",
+    "0011.1-IMG_20221211_092349.jpg",
+    "0011.2-IMG_20230106_131827.jpg",
+    "0012-IMG_20210316_115323.jpg",
+    "0013IMG_20210211_100738.jpg",
+    "0014IMG_20210212_145803.jpg",
+    "0015-IMG_20221129_012018.jpg",
+    "0015IMG_20210910_094904.jpg",
+    "0017.1-IMG_20221122_101616.jpg"
+];
+var imageUrls = images.map(item => "images/under_your_feet/" + item);
+console.log(imageUrls)
+
+// Get references to the column elements
+const column1 = document.getElementById('column-1');
+const column2 = document.getElementById('column-2');
+
+// Loop through the image URLs and create image elements for each
+imageUrls.forEach((imageUrl, index) => {
+    const imgElement = document.createElement('img');
+    imgElement.src = imageUrl;
+    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+
+    // Append the image to one of the columns, alternating between columns
+    if (index % 2 === 0) {
+        column1.appendChild(imgElement);
+    } else {
+        column2.appendChild(imgElement);
+    }
+});
+
+</script>
 
 
 </html>
