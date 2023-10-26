@@ -136,13 +136,12 @@ imageUrls.forEach((imageUrl, index) => {
     // imgElement.style.padding = '20px';
 
     // Append the image to one of the columns, alternating between columns
-    if (index % 2 === 0) {
+    if (index % 3 === 0) {
         column1.appendChild(imgElement);
-        // column1.appendChild("<br>");
-    } else if (index % 3 === 0) {
-        column3.appendChild(imgElement);
-    } else {
+    } else if (index % 3 === 1) {
         column2.appendChild(imgElement);
+    } else {
+        column3.appendChild(imgElement);
     }
 });
 
