@@ -67,8 +67,15 @@
             <div class="col-8">
                 <section id="gallery" class="py-5">
                     
-                    <h3 class="text-left mb-5 font-weight-light">Under your feet</h3>
+                    <h3 class="text-left mb-5 font-weight-light">State Of Decay</h3>
+
+                    
+                </div> 
+
+                <div class="col-md-2"></div>    
+
                     <div class="row" id="image-container">
+                        <h4 class="text-left mb-5 font-weight-light">Bar</h4>
                         <div class="col-md-6">
                             <div class="card border-0" style="border-radius: 0%;" id="column-1"></div>
                         </div>
@@ -76,12 +83,19 @@
                             <div class="card border-0" style="border-radius: 0%;" id="column-2"></div>
                         </div>
                     </div>
-                    
-                    <br>                    
-                </section>
-            </div> 
 
-            <div class="col-md-2"></div> 
+                    <div class="row" id="image-container">
+                        <br>
+                        <h4 class="text-left mb-5 font-weight-light">Bioscoop</h4>
+                        <div class="col-md-6">
+                            <div class="card border-0" style="border-radius: 0%;" id="bioscolumn-1"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0" style="border-radius: 0%;" id="bioscolumn-2"></div>
+                        </div>
+                    </div>         
+                    <br>                    
+                </section>  
         </div>
     </div>
     
@@ -91,81 +105,22 @@
 </body>
 
 <script>
-const imageUrls = [
-  'images/under_your_feet/0010-IMG_20210301_141832.jpg',
-  'images/under_your_feet/0011-IMG_20221103_125418.jpg',
-  'images/under_your_feet/0011.1-IMG_20221211_092349.jpg',
-  'images/under_your_feet/0011.2-IMG_20230106_131827.jpg',
-  'images/under_your_feet/0012-IMG_20210316_115323.jpg',
-  'images/under_your_feet/0013IMG_20210211_100738.jpg',
-  'images/under_your_feet/0014IMG_20210212_145803.jpg',
-  'images/under_your_feet/0015-IMG_20221129_012018.jpg',
-  'images/under_your_feet/0015IMG_20210910_094904.jpg',
-  'images/under_your_feet/0017.1-IMG_20221122_101616.jpg',
-  'images/under_your_feet/0018.2-IMG_20221209_133654.jpg',
-  'images/under_your_feet/0019-IMG_20210124_174501.jpg',
-  'images/under_your_feet/0020-IMG_20200617_210057.jpg',
-  'images/under_your_feet/0027-IMG_20210221_153525.jpg',
-  'images/under_your_feet/0028-IMG_20210520_164739.jpg',
-  'images/under_your_feet/0029-IMG_20210313_121007.jpg',
-  'images/under_your_feet/0030.1-IMG_20221215_132717.jpg',
-  'images/under_your_feet/0031-IMG_20210803_171009.jpg',
-  'images/under_your_feet/0031.0.1PXL_20230323_093355886.jpg',
-  'images/under_your_feet/0031.1PXL_20230322_174300404.jpg',
-  'images/under_your_feet/0032-IMG_20230111_094942.jpg',
-  'images/under_your_feet/0032.1PXL_20230609_115608065.jpg',
-  'images/under_your_feet/0032.2PXL_20230622_093139774.jpg',
-  'images/under_your_feet/0033-IMG_20210116_140512.jpg',
-  'images/under_your_feet/0034-IMG_20210430_094432.jpg',
-  'images/under_your_feet/0035-20190327_122555.jpg',
-  'images/under_your_feet/0036-20190326_113258.jpg',
-  'images/under_your_feet/0037-IMG_20200702_152837.jpg',
-  'images/under_your_feet/0038-IMG_20210617_092732.jpg',
-  'images/under_your_feet/0039-IMG_20220513_170236.jpg',
-  'images/under_your_feet/004-IMG_20210911_130603.jpg',
-  'images/under_your_feet/004.1-IMG_20221221_133015.jpg',
-  'images/under_your_feet/0040-IMG_20210220_143120.jpg',
-  'images/under_your_feet/0041-20190419_123042.jpg',
-  'images/under_your_feet/0046-IMG_20210218_212801.jpg',
-  'images/under_your_feet/0046.01-PXL_20230301_103045870.jpg',
-  'images/under_your_feet/0046.02PXL_20230523_095853080.jpg',
-  'images/under_your_feet/0047-IMG_20210220_235622.jpg',
-  'images/under_your_feet/0048-IMG_20220924_120139.jpg',
-  'images/under_your_feet/0048.1-IMG_20191126_214115.jpg',
-  'images/under_your_feet/005-20190427_171927.jpg',
-  'images/under_your_feet/0054-IMG_20221201_125121.jpg',
-  'images/under_your_feet/0054.0.5-PXL_20230304_203052506.jpg',
-  'images/under_your_feet/0054.01-PXL_20230309_102213244.jpg',
-  'images/under_your_feet/0055-IMG_20210706_125139.jpg',
-  'images/under_your_feet/0056-IMG_20210930_155410.jpg',
-  'images/under_your_feet/006-IMG_20211214_143339-2.jpg',
-  'images/under_your_feet/006.1-IMG_20221013_161819.jpg',
-  'images/under_your_feet/0061.2-IMG_20221122_162551.jpg',
-  'images/under_your_feet/0068-20190219_103847.jpg',
-  'images/under_your_feet/0069-20190407_093022.jpg',
-  'images/under_your_feet/0069.1-IMG_20210627_235741.jpg',
-  'images/under_your_feet/007-IMG_20221121_153615.jpg',
-  'images/under_your_feet/008-IMG_20210218_211713.jpg',
-  'images/under_your_feet/008.0.5PXL_20230413_113917709.jpg',
-  'images/under_your_feet/0080-IMG_20210309_112351.jpg',
-  'images/under_your_feet/0081-IMG_20200120_100654.jpg',
-  'images/under_your_feet/0082-20190411_151344.jpg',
-  'images/under_your_feet/0082.0.5PXL_20230821_103238980.jpg',
-  'images/under_your_feet/0083-IMG_20210913_111703.jpg',
-  'images/under_your_feet/0083.1-20190423_132513.jpg',
-  'images/under_your_feet/0083.1.05.PXL_20230402_110604460.jpg',
-  'images/under_your_feet/0083.2-IMG_20200426_132829-2.jpg',
-  'images/under_your_feet/0084']
+const bar = [
+"images/state_of_decay-bar/DSCF0410.JPG",
+"images/state_of_decay-bar/DSCF1021.JPG",
+"images/state_of_decay-bar/DSCF3440.JPG",
+"images/state_of_decay-bar/DSCF3462.JPG",
+"images/state_of_decay-bar/DSCF5730 copy.jpg",
+"images/state_of_decay-bar/DSCF9635.jpg",
+"images/state_of_decay-bar/staatvervalll.jpg"]
 
-// var imageUrls = images.map(item => "images/under_your_feet/" + item);
-console.log(imageUrls)
 
 // Get references to the column elements
 const column1 = document.getElementById('column-1');
 const column2 = document.getElementById('column-2');
 
 // Loop through the image URLs and create image elements for each
-imageUrls.forEach((imageUrl, index) => {
+bar.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
     imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
@@ -180,6 +135,37 @@ imageUrls.forEach((imageUrl, index) => {
     }
 });
 
+const bios = [
+"images/state_of_decay-bioscoop/DSCF0273.JPG",
+"images/state_of_decay-bioscoop/DSCF0288.JPG",
+"images/state_of_decay-bioscoop/DSCF0605.JPG",
+"images/state_of_decay-bioscoop/DSCF0608.JPG",
+"images/state_of_decay-bioscoop/DSCF0617.JPG",
+"images/state_of_decay-bioscoop/DSCF0666.JPG",
+"images/state_of_decay-bioscoop/DSCF2799.jpg",
+"images/state_of_decay-bioscoop/DSCF9334.JPG",
+"images/state_of_decay-bioscoop/STAATVERVAbenLaf.jpg",
+"images/state_of_decay-bioscoop/svv.png"]
+
+// Get references to the column elements
+const bioscolumn1 = document.getElementById('bioscolumn-1');
+const bioscolumn2 = document.getElementById('bioscolumn-2');
+
+// Loop through the image URLs and create image elements for each
+bios.forEach((imageUrl, index) => {
+    const imgElement = document.createElement('img');
+    imgElement.src = imageUrl;
+    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+    imgElement.style.padding = '20px';
+
+    // Append the image to one of the columns, alternating between columns
+    if (index % 2 === 0) {
+        bioscolumn1.appendChild(imgElement);
+        // column1.appendChild("<br>");
+    } else {
+        bioscolumn2.appendChild(imgElement);
+    }
+});
 </script>
 
 
