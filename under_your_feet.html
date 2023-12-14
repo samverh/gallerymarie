@@ -239,27 +239,74 @@ const imageUrls = [
 // var imageUrls = images.map(item => "images/under_your_feet/" + item);
 console.log(imageUrls)
 
+// // Get references to the column elements
+// const column1 = document.getElementById('column-1');
+// const column2 = document.getElementById('column-2');
+
+// // Loop through the image URLs and create image elements for each
+// imageUrls.forEach((imageUrl, index) => {
+//     const imgElement = document.createElement('img');
+//     imgElement.src = imageUrl;
+//     imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+//     imgElement.className = 'py-3';
+//     imgElement.style.padding = '4px';
+//     imgElement.setAttribute('loading', 'lazy');
+
+//     // Append the image to one of the columns, alternating between columns
+//     if (index % 2 === 0) {
+//         column1.appendChild(imgElement);
+//         // column1.appendChild("<br>");
+//     } else {
+//         column2.appendChild(imgElement);
+//     }
+// });
+
+// const imageUrls = [...]; // Your array of image URLs
+
 // Get references to the column elements
 const column1 = document.getElementById('column-1');
 const column2 = document.getElementById('column-2');
 
+// Intersection Observer options
+const options = {
+  root: null, // Use the viewport as the root
+  rootMargin: '0px', // No margin
+  threshold: 0.5 // Trigger when 50% of the image is visible
+};
+
+// Create a callback function to handle the intersection changes
+const handleIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src; // Set the 'src' attribute to start loading the image
+      observer.unobserve(img); // Unobserve the image to stop further callbacks for this image
+    }
+  });
+};
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, options);
+
 // Loop through the image URLs and create image elements for each
 imageUrls.forEach((imageUrl, index) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
-    imgElement.className = 'py-3';
-    imgElement.style.padding = '4px';
-    imgElement.setAttribute('loading', 'lazy');
+  const imgElement = document.createElement('img');
+  imgElement.dataset.src = imageUrl; // Store the actual image URL in a 'data-src' attribute
+  imgElement.className = 'img-fluid py-3'; // Combine the classes
+  imgElement.style.padding = '4px';
+  imgElement.setAttribute('loading', 'lazy');
 
-    // Append the image to one of the columns, alternating between columns
-    if (index % 2 === 0) {
-        column1.appendChild(imgElement);
-        // column1.appendChild("<br>");
-    } else {
-        column2.appendChild(imgElement);
-    }
+  // Append the image to one of the columns, alternating between columns
+  if (index % 2 === 0) {
+    column1.appendChild(imgElement);
+  } else {
+    column2.appendChild(imgElement);
+  }
+
+  // Observe each image element
+  observer.observe(imgElement);
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var button = document.getElementById("backToTopBtn");
