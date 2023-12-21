@@ -53,9 +53,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="posters.html">Posters</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="2d.html">2D</a>
-                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -75,7 +72,7 @@
             <div class="col-xl-10 col-lg-8 col-md-12">
                 <section id="gallery" class="py-5">
                     
-                    <h3 class="text-left mb-5 font-weight-light">Posters</h3>
+                    <h3 class="text-left mb-5 font-weight-light">Title</h3>
                     <div class="row" id="image-container">
                         <div class="col-xl-6">
                             <div class="card border-0" style="border-radius: 0%;" id="column-1"></div>
@@ -99,51 +96,26 @@
 </body>
 
 <script>
-const imageUrls = [
-"images/posters/16femmes.jpg",
-"images/posters/amsterdamned2019spin.jpg",
-"images/posters/films debuut.jpg",
-"images/posters/johnsons xancadix lives zonder extra -Recovered-Recovered.jpg",
-"images/posters/mokla 21 cenTURY-Recovered plus tijd extra been.jpg",
-"images/posters/murder mysteries af lichter.jpg",
-"images/posters/november.jpg",
-"images/posters/novemberveelpoppetjessmettekst.jpg",
-"images/posters/oppas poster babystoer-Recovered-Recovered.jpg",
-"images/posters/oppas poster letopgroot-Recovered-Recovered.jpg",
-"images/posters/parasiteeng-Recovered.jpg",
-"images/posters/pdf.jpg",
-"images/posters/poster flor vida oranje 2e poging.jpg",
-"images/posters/queer2.jpg",
-"images/posters/radio-1.jpg",
-"images/posters/soepj.jpg",
-"images/posters/trascreenklaaranderpop.jpg",
-"images/posters/vampiersssssl.jpg",
-"images/posters/VISgerommeltxt.jpg",
-"images/posters/voorleesexpress2kleuren.jpg",
-"images/posters/waitingcarnaval.jpg"]
+    const imageUrls = []
 
-// var imageUrls = images.map(item => "images/under_your_feet/" + item);
-console.log(imageUrls)
+    // Get references to the column elements
+    const column1 = document.getElementById('column-1');
+    const column2 = document.getElementById('column-2');
 
-// Get references to the column elements
-const column1 = document.getElementById('column-1');
-const column2 = document.getElementById('column-2');
+    // Loop through the image URLs and create image elements for each
+    imageUrls.forEach((imageUrl, index) => {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageUrl;
+        imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+        imgElement.style.padding = '20px';
 
-// Loop through the image URLs and create image elements for each
-imageUrls.forEach((imageUrl, index) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
-    imgElement.style.padding = '20px';
-
-    // Append the image to one of the columns, alternating between columns
-    if (index % 2 === 0) {
-        column1.appendChild(imgElement);
-        // column1.appendChild("<br>");
-    } else {
-        column2.appendChild(imgElement);
-    }
-});
+        // Append the image to one of the columns, alternating between columns
+        if (index % 2 === 0) {
+            column1.appendChild(imgElement);
+        } else {
+            column2.appendChild(imgElement);
+        }
+    });
 
 </script>
 
