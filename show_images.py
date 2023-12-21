@@ -1,7 +1,8 @@
 import os
 
 
-folder_path = "images/under_your_feet/" 
+folder_path = "images/collages/2" 
+
 # folder_path = "images/state_of_decay-bioscoop/" 
 
 def list_files(folder):
