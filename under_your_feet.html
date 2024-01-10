@@ -42,7 +42,23 @@
         padding-left: 20px; 
         padding-right: 20px; 
     } */
+    .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    }
 
+    @media (min-width: 768px) {
+    .nav-flex .nav-item {
+        flex: 1 0 auto; /* Scale items proportionally */
+    }
+    }
+
+    @media (max-width: 767px) {
+    .nav-flex .nav-item {
+        flex: none; /* Prevent items from scaling */
+        text-overflow: ellipsis; /* Truncate text if it exceeds container width */
+    }
+    }
 </style>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>

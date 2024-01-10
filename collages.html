@@ -52,7 +52,23 @@
     .collapsible-link[aria-expanded='true']::before {
     transform: rotate(180deg);
     }
+    .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    }
 
+    @media (min-width: 768px) {
+    .nav-flex .nav-item {
+        flex: 1 0 auto; /* Scale items proportionally */
+    }
+    }
+
+    @media (max-width: 767px) {
+    .nav-flex .nav-item {
+        flex: none; /* Prevent items from scaling */
+        text-overflow: ellipsis; /* Truncate text if it exceeds container width */
+    }
+    }
 </style>
 <body>
     <header>
