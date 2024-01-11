@@ -188,9 +188,9 @@ const column2_2 = document.getElementById('column-2_2');
 imageUrls.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
-    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+    imgElement.className = 'img-fluid py-3'; // Make the images responsive using Bootstrap class
     imgElement.loading = 'lazy';
-    // imgElement.style.padding = '20px';
+    imgElement.style.padding = '4px';
 
     // Append the image to one of the columns, alternating between columns
     if (index % 2 === 0) {
