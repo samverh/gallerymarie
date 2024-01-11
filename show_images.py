@@ -1,7 +1,7 @@
 import os
 
 
-folder_path = "images/2d_into_3d/" 
+folder_path = "images/project pop/pop fashion/" 
 
 
 
