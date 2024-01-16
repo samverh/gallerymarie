@@ -1,7 +1,8 @@
 import os
 
 
-folder_path = "images/project pop/pop fashion/" 
+folder_path = "images/project pop/pop vinted/" 
+
 
 
 
