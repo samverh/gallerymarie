@@ -142,22 +142,54 @@
                               <div class="accordion-body"> -->
                                 <br><br>
                                   <h4 class="text-left mb-5 font-weight-light">Drawings</h4>
-                                  <div class="row" id="image-container">
-                                      <div class="col-md-6">
-                                          <div class="card border-0" style="border-radius: 0%;" id="column-1_2"></div>
-                                      </div>
-                                      <div class="col-md-6">
-                                          <div class="card border-0" style="border-radius: 0%;" id="column-2_2"></div>
-                                      </div>
+ 
+                                  
+                                <div class="row" id="image-container" style="margin-bottom: 80px;">
+                                    <div class="col-xl-6">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/IMG_20200523_151504_273.jpg" alt="About" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/IMG_20200526_115723_857.jpg" alt="About" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
 
-                                  </div>
+                                <div class="row" id="image-container" style="margin-bottom: 80px;">
+                                    <div class="col-xl-12">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/SquarePic_20191103_01363271.jpg" alt="About" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="image-container" style="margin-bottom: 80px;">
+                                    <div class="col-xl-6">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/SquarePic_20191104_11425616.jpg" alt="About" class="img-fluid"  style="height: auto; width: auto;">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/SquarePic_20191126_08402035_2.jpg" alt="About" class="img-fluid"  style="height: auto; width: auto;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="image-container" style="margin-bottom: 80px;">
+                                    <div class="col-xl-12">
+                                        <div class="card border-0" style="border-radius: 0%;">
+                                            <img src="images/2d/drawings/SquarePic_20200514_15383555.jpg" alt="About" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
                                 
-                              <!-- </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    
-                    
+                                
+                                
+
+                                   
                     
                     <br>                    
                 </section>
@@ -238,33 +270,6 @@ imageUrls.forEach((imageUrl, index) => {
     }
 });
 
-const imageUrls2 = ["images/2d/drawings/IMG_20200523_151504_273.jpg",
-"images/2d/drawings/IMG_20200526_115723_857.jpg",
-"images/2d/drawings/SquarePic_20191103_01363271.jpg",
-"images/2d/drawings/SquarePic_20191104_11425616.jpg",
-"images/2d/drawings/SquarePic_20191123_14583663.jpg",
-"images/2d/drawings/SquarePic_20191126_08402035.jpg",
-"images/2d/drawings/SquarePic_20200211_12323235.jpg",
-"images/2d/drawings/SquarePic_20200514_15383555.jpg"]
-
-const column1_2 = document.getElementById('column-1_2');
-const column2_2 = document.getElementById('column-2_2');
-
-// Loop through the image URLs and create image elements for each
-imageUrls2.forEach((imageUrl, index) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
-    imgElement.loading = 'lazy';
-    // imgElement.style.padding = '20px';
-
-    // Append the image to one of the columns, alternating between columns
-    if (index % 2 === 0) {
-        column1_2.appendChild(imgElement);
-    } else if (index % 2 === 1) {
-        column2_2.appendChild(imgElement);
-    } 
-});
 
 </script>
 
