@@ -302,7 +302,7 @@ const column2 = document.getElementById('column-2');
 const options = {
   root: null, // Use the viewport as the root
   rootMargin: '0px', // No margin
-  threshold: 0.5 // Trigger when 50% of the image is visible
+  threshold: 0.01 // Trigger when 1% of the image is visible
 };
 
 // Create a callback function to handle the intersection changes
@@ -325,6 +325,9 @@ imageUrls.forEach((imageUrl, index) => {
   imgElement.dataset.src = imageUrl; // Store the actual image URL in a 'data-src' attribute
   imgElement.className = 'img-fluid py-3'; // Combine the classes
   imgElement.style.padding = '4px';
+  imgElement.style.height = '700px';
+  imgElement.style.width = '1125px';
+//   height:200px; width:200px;
   imgElement.setAttribute('loading', 'lazy');
 
   // Append the image to one of the columns, alternating between columns
