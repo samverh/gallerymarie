@@ -9,12 +9,17 @@ body {
     /* background-color: #CFD8DC; */
     font-family:"Futura Book" !important;
     font-weight: 100 !important;
+    font-size: 13px;
 }
 body,
 html { height: 100%;}
 .nav .open > a, 
 .nav .open > a:hover, 
 .nav .open > a:focus {background-color: transparent;}
+
+ul.exhibitions li {
+  padding-bottom: 10px; /* Adjust the value as needed */
+}
 
 /*-------------------------------*/
 /*           Wrappers            */
