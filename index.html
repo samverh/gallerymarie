@@ -1,132 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <link href="//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book" rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <title>Marie de Vreede</title>
-</head>
-<style>
-    body{
-        font-family:"Futura Book" !important;
-        font-weight: 100 !important;
-    }
-
-    .navbar-nav li {
-      margin-right: 30px;
-    }
-    .nav-flex {
-    display: flex;
-    justify-content: space-between;
-    }
-
-    @media (min-width: 768px) {
-    .nav-flex .nav-item {
-        flex: 1 0 auto; /* Scale items proportionally */
-    }
-    }
-
-    @media (max-width: 767px) {
-    .nav-flex .nav-item {
-        flex: none; /* Prevent items from scaling */
-        text-overflow: ellipsis; /* Truncate text if it exceeds container width */
-    }
-    }
-
-    next:hover {
-    background-color: #c3c3c3;
-    color: black;
-    }
-
-    .next {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1px 9px;
-    background-color: #e6e6e6;
-    color: white;
-    border-radius: 50%;
-    }
-
-    .pagecontent {
-      padding-top: 60px; /* Adjust this value based on your navbar height */
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Marie de Vreede</title>
+    </head>
     
-</style>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-xl navbar-light bg-light nav-flex fixed-top">
-            
-            <div class="container">
-            <a class="navbar-brand" href="#">Marie de Vreede</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="under_your_feet.html">Under Your Feet</a>
+    <body>
+        <div id="wrapper">
+            <div class="overlay"></div>
+                <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">     
+                <ul class="nav sidebar-nav">
+
+                    <li><a href="about.html">About</a></li>
+          
+                    <!-- 2D DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">2D</a>
+                        <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                            <li><div class="dropdown-header"><a href="2d.html">Drawings</a></div></li>
+                            <li><div class="dropdown-header"><a href="collages.html">Collages</a></div></li>
+                            <li><div class="dropdown-header"><a href="posters.html">Posters</a></div></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="seen_to_be_seen.html">Seen To Be Seen</a>
+
+                    <!-- 3D DROPDOWN -->
+                    <li class="dropdown">
+                        <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">3D</a>
+                        <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                            <li><div class="dropdown-header"><a href="pop.html">Poppen</a></div></li>
+                            <li><div class="dropdown-header"><a href="sculptures.html">Sculptures</a></div></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="state_of_decay.html">State Of Decay</a>
+
+                    <!--PHOTOGRAPHY -->
+                    <li class="dropdown">
+                        <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Photography</a>
+                        <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                            <li><div class="dropdown-header"><a href="under_your_feet.html">Under Your Feet</a></div></li>
+                            <li><div class="dropdown-header"><a href="state_of_decay.html">State Of Decay</a></div></li>
+                            <li><div class="dropdown-header"><a href="2d_into_3d.html">2D into 3D</a></div></li>
+                        </ul>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="sculptures.html">Sculptures</a>
-                    </li> -->
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="collages.html">Collages</a>
+
+                    <!-- FILM -->
+                    <li class="dropdown">
+                        <a href="#works" class="dropdown-toggle"  data-toggle="dropdown">Film</a>
+                        <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                            <li><div class="dropdown-header"><a href="seen_to_be_seen.html">Seen To Be Seen</a></div></li>
+                            <li><div class="dropdown-header"><a href="crab.html">Crab Animation</a></div></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="crab.html">Crab</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="posters.html">Posters</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pop.html">Pop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="2d.html">2D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sculptures.html">3D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="2d_into_3d.html">2D into 3D</a>
-                    </li>
-                <!-- </ul>
-                <ul class="navbar-nav ms-auto"> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
                 </ul>
-            </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
 
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container pagecontent">
 
-    <div class="container pagecontent">
-        <div class="row d-flex flex-wrap align-items-center">
-
-            <div class="col-xl-2"></div>
-
-            <div class="col-xl-4">
-
-                <!-- <div class="col-md-5"> -->
-                    <section id="gallery" class="py-5">
-                        
-                        <!-- <div class="row"> -->
+                    <!-- BEGIN PAGE CONTENT -->
+                    <div class="row align-items-center">
+                        <div class="col-xl-2"></div>
+                        <div class="col-xl-8">
                             <h3 class="text-left mb-5 font-weight-light">About</h3>
-                            
+                        </div>
+                        <div class="col-xl-2"></div>         
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-xl-2"></div>
+
+                        <div class="col-xl-4 py-5">
+ 
                             I observe the way in which people behave and move in public space. This is either within my direct close environment or with complete strangers. I am drawn to rejected individuals/objects, which are out of place. There can be something wrenching inside of me when I see the disapproval inflicted on them, which I am trying to understand. In order to capture people/objects in the way I see them, in my observations and feelings, I use imagery; e.g. documenting film on interesting characters, photos of squashed objects and grotesque sculptures. The surrounding space reveals the rejection.
                             <br>
                             <br>
@@ -134,64 +95,41 @@
                             <br>
                             <br>
                             The focus is on the investigation of relations: between people, between people and objects, or between objects. I try to document how social structures determine our behaviour with film. By playfully using the power of the camera and its perspective, one can challenge the value of the observed truth. In situ installations allow for another truth, one that might be more subjective or personal. Particularly, in ‘The State of Decay’ project, I was trying to show the contrast between the beauty of a cinema/bar (environment) and the emptiness in people’s current life due to corona. Sculpted creatures with a fabricated look are placed in a empty cinema room. I work out my perception to bring sculptures to life in this lockdown and try to visualise the human state in fotoseries/videos with sound of this site specific installation.
-                        <!-- </div>             -->
+                        </div>  
 
-                    </section>
-                <!-- </div>  -->
-            </div>  
+                        <!-- FOTO MARIE -->
+                        <div class="col-xl-4">
+                            <section id="gallery" class="py-5">
+                                <img src="images\20171011_120750.jpg" alt="About" class="img-fluid">
+                            </section>
+                        </div> 
+                        <div class="col-xl-2"></div>
+                    </div>
+                    <!-- END PAGE CONTENT -->
 
-            <div class="col-xl-1"></div>
+                    <!-- BEGIN LIST EXPOSITIONS -->
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">   
+                            <section id="gallery" class="py-5">              
+                                <h4 class="text-left mb-5 font-weight-light">EXHIBITIONS & PROJECTS </h4>
+                                <ul class="exhibitions">
+                                    <li>Graduation show Gerrit Rietveld Academie (2023) “Seen to be Seen” with Mette van Dijk (VaV) &nbsp; <a href="seen_to_be_seen.html" class="next round">&#8250;</a></li>
+                                    <li>Tiftix Amsterdam: Christmas showroom etalage “Quiet Family Dinner” (2021) &nbsp; <a href="pop_tiftix.html" class="next round">&#8250;</a></li>
+                                    <li>Philosophy Festival Drift (2021) exhibition of several sculptures</li>
+                                    <li>Filmtheater Kriterion corona exhibition “Staat van Verval” (2020) with Lieve de Vreede & Nick Ouwehand &nbsp; <a href="state_of_decay.html" class="next round">&#8250;</a></li>
+                                    <li>Plan B Project Space summer exhibition “Staat van Verval” (2020) with Lieve de Vreede & Nick Ouwehand &nbsp; <a href="state_of_decay.html" class="next round">&#8250;</a></li>
+                                </ul>
+                            </section>
+                        </div> 
+                        <div class="col-lg-2"></div> 
+                    </div> 
+                    <!-- END LIST EXPOSITIONS -->
 
-            <div class="col-xl-4">
-                <section id="gallery" class="py-5">
-                    <img src="images\20171011_120750.jpg" alt="About" class="img-fluid">
-                </section>
-            </div> 
+                </div>
+                <!-- END PAGE CONTENT -->
 
-            <div class="col-xl-1"></div>
-            
-
-
-            <!-- <div class="col-md-2"></div>  -->
+            </div>
         </div>
-
-        <div class="row">
-            
-                <div class="col-lg-2"></div>
-
-                <div class="col-lg-8">   
-                    <section id="gallery" class="py-5">              
-                        <h4 class="text-left mb-5 font-weight-light">EXHIBITIONS & PROJECTS </h4>
-                        <ul>
-                            <li>Graduation show Gerrit Rietveld Academie (2023) “Seen to be Seen” with Mette van Dijk (VaV) &nbsp; <a href="seen_to_be_seen.html" class="next round">&#8250;</a></li>
-                            <br>
-                            <li>Tiftix Amsterdam: Christmas showroom etalage “Quiet Family Dinner” (2021) &nbsp; <a href="pop_tiftix.html" class="next round">&#8250;</a></li>
-                            <br>
-                            <li>Philosophy Festival Drift (2021) exhibition of several sculptures</li>
-                            <br>
-                            <li>Filmtheater Kriterion corona exhibition “Staat van Verval” (2020) with Lieve de Vreede & Nick Ouwehand &nbsp; <a href="state_of_decay.html" class="next round">&#8250;</a></li>
-                            <br>
-                            <li>Plan B Project Space summer exhibition “Staat van Verval” (2020) with Lieve de Vreede & Nick Ouwehand &nbsp; <a href="state_of_decay.html" class="next round">&#8250;</a></li>
-                        </ul>
-                    </section>
-                </div> 
-                
-                <div class="col-lg-2"></div> 
-            
-        </div> 
-
-
-    </div>
-    
-    <footer>
-        <!-- Add your footer content here -->
-    </footer>
-</body>
-
-<script>
-
-
-</script>
-
-
+    </body>
 </html>

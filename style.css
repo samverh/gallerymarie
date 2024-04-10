@@ -22,6 +22,19 @@ ul.exhibitions li {
   padding-bottom: 10px; /* Adjust the value as needed */
 }
 
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 50%;
+  /* font-size: 24px; */
+  color: white; /* Color of the arrow icon */
+  text-decoration: none;
+}
+
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/
@@ -63,13 +76,14 @@ ul.exhibitions li {
 
 #page-content-wrapper {
     width: 100%;
+    position: absolute;
     padding-top: 70px;
 }
 
-#wrapper.toggled #page-content-wrapper {
+/* #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: calc(-1 * var(--sidebar-width));
-}
+} */
 
 /*-------------------------------*/
 /*     Sidebar nav styles        */
