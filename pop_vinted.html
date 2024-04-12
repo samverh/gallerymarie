@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
         <link href="//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -145,7 +146,7 @@
                                     <div class="col-xl-1"></div>
                                     <div class="col-xl-10">
                                         <div class="card border-0" style="border-radius: 0%;">
-                                            <img src="images/project pop/pop vinted/Picture1.png" alt="About" class="img-fluid">
+                                            <img class="lazyload" src="images/project pop/pop vinted/Picture1.png" alt="About" class="img-fluid">
                                         </div>
                                     </div>
                                     <div class="col-xl-1"></div>
@@ -154,7 +155,7 @@
                                     <div class="col-xl-1"></div>
                                     <div class="col-xl-10">
                                         <div class="card border-0" style="border-radius: 0%;">
-                                            <img src="images/project pop/pop vinted/Picture2.png" alt="About" class="img-fluid">
+                                            <img class="lazyload" src="images/project pop/pop vinted/Picture2.png" alt="About" class="img-fluid">
                                         </div>
                                     </div>
                                     <div class="col-xl-1"></div>
@@ -163,7 +164,7 @@
                                     <div class="col-xl-1"></div>
                                     <div class="col-xl-10">
                                         <div class="card border-0" style="border-radius: 0%;">
-                                            <img src="images/project pop/pop vinted/Picture3.png" alt="About" class="img-fluid">
+                                            <img class="lazyload" src="images/project pop/pop vinted/Picture3.png" alt="About" class="img-fluid">
                                         </div>
                                     </div>
                                     <div class="col-xl-1"></div>
@@ -204,7 +205,8 @@ imageUrls.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
     imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
-    imgElement.loading = 'lazy';
+    // imgElement.loading = 'lazy';
+    imgElement.setAttribute('loading', 'lazy');
     // imgElement.style.padding = '4px';
 
     // Append the image to one of the columns, alternating between columns
