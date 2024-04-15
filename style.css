@@ -1,6 +1,14 @@
+/* size of the navigation bar */
 :root {
   --sidebar-width: 30%;
   --sidebar-items-margin-top: 15%;
+}
+
+/* for mobile screens */
+@media screen and (max-width: 768px) {
+  :root {
+    --sidebar-width: 80%; 
+  }
 }
 
 
@@ -309,7 +317,7 @@ ul.exhibitions li {
 }
 
 
-/* Add this media query for mobile screens */
+/* don't show closing button for mobile screens */
 @media only screen and (max-width: 768px) {
   .hamburger.is-open .hamb-top,
   .hamburger.is-open .hamb-middle,
