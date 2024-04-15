@@ -272,7 +272,8 @@ imageUrls.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
     imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
-    imgElement.loading = 'lazy';
+    // imgElement.loading = 'lazy';
+    imgElement.setAttribute('loading', 'lazy');
     // imgElement.style.padding = '20px';
 
     // Append the image to one of the columns, alternating between columns
