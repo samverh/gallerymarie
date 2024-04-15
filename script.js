@@ -26,8 +26,10 @@ $(document).ready(function () {
 
     // close navbar when clicking outside of it
     overlay.click(function() {
-      hamburger_cross();
-      $('#wrapper').toggleClass('toggled');
+      if (!overlay.hasClass('index')) {
+        hamburger_cross();
+        $('#wrapper').toggleClass('toggled');
+      }
     });
     
     // adds the class "toggled" if it's not present, and removes it if it is already present
