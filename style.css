@@ -307,6 +307,17 @@ ul.exhibitions li {
   bottom: 0;
   -webkit-transition: all .35s ease-in-out;
 }
+
+
+/* Add this media query for mobile screens */
+@media only screen and (max-width: 768px) {
+  .hamburger.is-open .hamb-top,
+  .hamburger.is-open .hamb-middle,
+  .hamburger.is-open .hamb-bottom {
+    display: none;
+  }
+}
+
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-middle,
 .hamburger.is-open .hamb-bottom {
