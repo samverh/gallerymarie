@@ -220,14 +220,15 @@ bios.forEach((imageUrl, index) => {
     // Append the image to one of the columns, alternating between columns
     if (index % 2 === 0) {
         bioscolumn1.appendChild(imgElement);
-        // column1.appendChild("<br>");
     } else {
         bioscolumn2.appendChild(imgElement);
     }
 });
 
 // lazy load all images with class lazyload
-lazyload();
+$(function() {
+    $("img.lazyload").lazyload();
+});
 
 </script>
 
