@@ -211,10 +211,11 @@ const bioscolumn2 = document.getElementById('bioscolumn-2');
 // Loop through the image URLs and create image elements for each
 bios.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
+    // imgElement.data-src = imageUrl;
     imgElement.src = imageUrl;
     imgElement.className = 'img-fluid lazyload'; // Make the images responsive using Bootstrap class
     imgElement.style.padding = '20px';
-    imgElement.setAttribute('loading', 'lazy');
+    imgElement.setAttribute('data-src', imageUrl);
 
     // Append the image to one of the columns, alternating between columns
     if (index % 2 === 0) {
