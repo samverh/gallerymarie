@@ -182,6 +182,7 @@
         imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
         imgElement.style.padding = '20px';
         imgElement.setAttribute('loading', 'lazy');
+        imgElement.classList.add("lazyload");
 
         // Append the image to one of the columns, alternating between columns
         if (index % 2 === 0) {
