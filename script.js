@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    
+    // lazy load all images with class lazyload
+    lazyload();
+
+    // js for navbar
     var trigger = $('.hamburger'),
     overlay = $('.overlay'),
     isClosed = false;
