@@ -212,7 +212,7 @@ const bioscolumn2 = document.getElementById('bioscolumn-2');
 bios.forEach((imageUrl, index) => {
     const imgElement = document.createElement('img');
     imgElement.src = imageUrl;
-    imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
+    imgElement.className = 'img-fluid lazyload'; // Make the images responsive using Bootstrap class
     imgElement.style.padding = '20px';
     imgElement.setAttribute('loading', 'lazy');
 
@@ -224,6 +224,10 @@ bios.forEach((imageUrl, index) => {
         bioscolumn2.appendChild(imgElement);
     }
 });
+
+// lazy load all images with class lazyload
+lazyload();
+
 </script>
 
 
