@@ -4,9 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/icon_round.png">
-        <!-- <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha384-9tXUv5SN9xgX1WpSfKcAx3WcM6/pH/uGYpL4mT8g7Fn3+8XEXWRc9FZ7ofP2b0ML" crossorigin="anonymous"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
         <link href="//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -147,6 +145,9 @@
 </body>
 
 <script>
+    // lazy load all images with class lazyload
+    lazyload();
+
     const imageUrls = [
     "images/posters/16femmes.jpg",
     "images/posters/amsterdamned2019spin.jpg",
@@ -183,7 +184,7 @@
         imgElement.src = imageUrl;
         imgElement.className = 'img-fluid'; // Make the images responsive using Bootstrap class
         imgElement.style.padding = '20px';
-        imgElement.setAttribute('loading', 'lazy');
+        // imgElement.setAttribute('loading', 'lazy');
         imgElement.classList.add("lazyload");
 
         // Append the image to one of the columns, alternating between columns
