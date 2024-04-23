@@ -43,6 +43,65 @@ ul.exhibitions li {
   text-decoration: none;
 }
 
+#infoBtn {
+  display: flex;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 50%;
+  color: white; /* Color of the arrow icon */
+  text-decoration: none;
+}
+
+/* Style for the popup background */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 1; /* Sit on top */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup content */
+.popup-content {
+  position: relative;
+  background-color: #e9e9e9f3;
+  margin: auto;
+  padding: 45px;
+  padding-right: 50px;
+  /* right: 10; */
+  border: none;
+  width: 50%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.096);
+  text-align: justify;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 4px; /* Adjust as necessary */
+  right: 15px; /* Adjust to ensure it does not overlap text */
+  color: #aaaaaa;
+  /* padding: 30px; */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/

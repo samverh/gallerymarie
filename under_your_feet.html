@@ -59,7 +59,16 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle"  data-toggle="dropdown">3D</a>
                         <ul class="dropdown-menu animated fadeInLeft" role="menu">
-                            <li><div class="dropdown-header"><a href="sculptures.html">Sculptures</a></div></li>
+                            <!-- <li><div class="dropdown-header"><a href="sculptures.html">Sculptures</a></div></li> -->
+                            <li class="dropdown">
+                                <div class="dropdown-header">
+                                    <a class="dropdown-toggle"  data-toggle="subdropdown">Sculptures</a>
+                                </div>
+                                <ul class="subdropdown-menu animated fadeInLeft" role="menu">
+                                    <li><div class="dropdown-header sub"><a href="sculptures_furniture.html">Furniture</a></div></li>
+                                    <li><div class="dropdown-header sub"><a href="sculptures_emotional.html">Emotional</a></div></li>
+                                </ul>
+                            </li>
                             <!-- <li><div class="dropdown-header"><a href="pop.html">Poppen</a></div></li> -->
                             <li class="dropdown">
                                 <div class="dropdown-header">
@@ -84,6 +93,7 @@
                             <li><div class="dropdown-header"><a href="under_your_feet.html">Under Your Feet</a></div></li>
                             <li><div class="dropdown-header"><a href="state_of_decay.html">State Of Decay</a></div></li>
                             <li><div class="dropdown-header"><a href="2d_into_3d.html">2D into 3D</a></div></li>
+                            <li><div class="dropdown-header"><a href="photos.html">Animal</a></div></li>
                         </ul>
                     </li>
 
@@ -113,10 +123,27 @@
                     <!-- BEGIN PAGE CONTENT -->
                     <div class="row align-items-center">
                         <div class="col-xl-1"></div>
-                        <div class="col-xl-11">
+                        <div class="col-xl-10">
                             <h3 class="text-left mb-5 font-weight-light">Under Your Feet</h3>
-                        </div>        
+                        </div>  
+
+                        <!-- More info -->
+                        <div class="col-xl-1">
+                            <button id="infoBtn" class="btn btn-floating"><i class="fa fa-info"></i></button>
+
+                            <!-- The Popup -->
+                            <div id="popup" class="popup">
+                                <div class="popup-content">
+                                    <span class="close-btn">&times;</span>
+                                    <p>
+                                        De objecten die ik fotografeer, zijn allemaal dingen die onbedoeld op de straat terecht zijn gekomen. Ik werk nu ruim 4 jaar aan deze serie en ‘Under Your Feet’ heeft door de jaren heen voor mij alleen maar meer intensiteit hebben gekregen. Ik heb een handigheid ontwikkeld in het spotten en fotograferen van mooie versies van hetzelfde: zo heb ik bijvoorbeeld wel vijftien bananenschillen, met ieder hun eigen karakter. Het is ook een psychologisch spelletje dat ik met mezelf speel: ik heb eigenlijk bijna altijd haast, en moet telkens de beslissing maken of het afval dat ik heb gezien de extra paar minuten vertraging waard is - om terug te gaan om het te fotograferen. Als het afval het omkeren waard lijkt, móet ik stoppen. Als ik het niet doe, heb ik spijt. Het zijn kortstondige fossielen en ze kunnen zomaar weg zijn. Geen van de dingen die ik heb gefotografeerd bestaan nog. Er ontstaat poëzie waarin het abjecte tot kunst wordt gepromoveerd. ‘Waste’ wordt verheven tot poëzie door het zien en vastleggen. Het contrast tussen esthetisch en weerzinwekkend vind ik interessant. Tijdens het maken van werk lijk ik elke keer terug te komen op het onaangename of zelfsprekende te doorbreken. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>      
                     </div>
+
+                    
 
         <div class="row">
             <div class="col-xl-1"></div>
@@ -126,12 +153,11 @@
                     
                     <!-- <h3 class="text-left mb-5 font-weight-light">Under Your Feet</h3> -->
 
-                    <div class="infotekst">
+                    <!-- <div class="infotekst">
                         <text>
-                        De objecten die ik fotografeer, zijn allemaal dingen die onbedoeld op de straat terecht zijn gekomen. Ik werk nu ruim 4 jaar aan deze serie en ‘Under Your Feet’ heeft door de jaren heen voor mij alleen maar meer intensiteit hebben gekregen. Ik heb een handigheid ontwikkeld in het spotten en fotograferen van mooie versies van hetzelfde: zo heb ik bijvoorbeeld wel vijftien bananenschillen, met ieder hun eigen karakter. Het is ook een psychologisch spelletje dat ik met mezelf speel: ik heb eigenlijk bijna altijd haast, en moet telkens de beslissing maken of het afval dat ik heb gezien de extra paar minuten vertraging waard is - om terug te gaan om het te fotograferen. Als het afval het omkeren waard lijkt, móet ik stoppen. Als ik het niet doe, heb ik spijt. Het zijn kortstondige fossielen en ze kunnen zomaar weg zijn. Geen van de dingen die ik heb gefotografeerd bestaan nog. Er ontstaat poëzie waarin het abjecte tot kunst wordt gepromoveerd. ‘Waste’ wordt verheven tot poëzie door het zien en vastleggen. Het contrast tussen esthetisch en weerzinwekkend vind ik interessant. Tijdens het maken van werk lijk ik elke keer terug te komen op het onaangename of zelfsprekende te doorbreken. 
                         </text>
                         <br><br>
-                    </div>
+                    </div> -->
 
                     <div class="row" id="image-container">
                         <div class="col-6">
@@ -150,7 +176,7 @@
         </div>
     </div>
     
-    <button id="backToTopBtn" class="btn btn-primary btn-floating"><i class="fa fa-arrow-up"></i></button>
+    <button id="backToTopBtn" class="btn btn-floating"><i class="fa fa-arrow-up"></i></button>
 
     </div>
 </body>
