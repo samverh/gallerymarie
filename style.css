@@ -5,6 +5,11 @@
   --popup-width: 50%;
 }
 
+.container {
+  align-items: flex-start;
+}
+/*  */
+
 /* for mobile screens */
 @media screen and (max-width: 768px) {
   :root {
