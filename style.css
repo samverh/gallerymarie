@@ -2,12 +2,14 @@
 :root {
   --sidebar-width: 30%;
   --sidebar-items-margin-top: 15%;
+  --popup-width: 50%;
 }
 
 /* for mobile screens */
 @media screen and (max-width: 768px) {
   :root {
     --sidebar-width: 45%; 
+    --popup-width: 80%;
   }
 }
 @font-face {
@@ -83,7 +85,7 @@ ul.exhibitions li {
   padding-right: 50px;
   /* right: 10; */
   border: none;
-  width: 50%;
+  width: var(--popup-width);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.096);
   text-align: justify;
 }
