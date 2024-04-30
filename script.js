@@ -42,27 +42,30 @@ $(document).ready(function () {
     // Get the button that opens the popup
     var btn = document.getElementById("infoBtn");
 
-    // Get the element that represents the popup
-    var popup = document.getElementById("popup");
+    if (btn) {
 
-    // Get the <span> element that closes the popup
-    var closeBtn = document.querySelector(".close-btn");
+      // Get the element that represents the popup
+      var popup = document.getElementById("popup");
 
-    // When the user clicks on the button, open the popup
-    btn.onclick = function() {
-        popup.style.display = "flex";
-    }
+      // Get the <span> element that closes the popup
+      var closeBtn = document.querySelector(".close-btn");
 
-    // When the user clicks on <span> (x), close the popup
-    closeBtn.onclick = function() {
-        popup.style.display = "none";
-    }
+      // When the user clicks on the button, open the popup
+      btn.onclick = function() {
+          popup.style.display = "flex";
+      }
 
-    // Also close the popup if the user clicks outside of the popup content
-    window.onclick = function(event) {
-        if (event.target == popup) {
-            popup.style.display = "none";
-        }
+      // When the user clicks on <span> (x), close the popup
+      closeBtn.onclick = function() {
+          popup.style.display = "none";
+      }
+
+      // Also close the popup if the user clicks outside of the popup content
+      window.onclick = function(event) {
+          if (event.target == popup) {
+              popup.style.display = "none";
+          }
+      }
     }
 
   });
