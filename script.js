@@ -68,4 +68,13 @@ $(document).ready(function () {
       }
     }
 
+    // Close the popup when the user presses the Esc key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") { // Check if the key is the "Escape" key
+          if (popup.style.display === "flex") { // Check if the popup is currently displayed
+              popup.style.display = "none";
+          }
+      }
+    });
+
   });
