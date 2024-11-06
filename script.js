@@ -1,3 +1,9 @@
+// navbar import
+async function loadTemplates() {
+  document.getElementById("navbar").innerHTML = await fetch('navbar.html').then(res => res.text());
+}
+loadTemplates();
+
 $(document).ready(function () {
 
     // js for navbar
