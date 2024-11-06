@@ -15,10 +15,35 @@
         <link rel="stylesheet" href="style.css"/>
         <title>Marie de Vreede</title>
     </head>
+
+    <style>
+
+
+        #page-content-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Styles for the image on the right side */
+        .right-side-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 130%; /* Adjust width as needed */
+            height: 130%;
+            background: url('images/2d_into_3d/SquarePic_20200211_12323235.jpg') no-repeat center center;
+            background-size: 110%;
+            z-index: -1;
+        }
+
+
+
+    </style>
     
     <body>
         <div id="wrapper">
-            <div class="overlay index"></div>
+            <div class="index"></div>
                 <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation" >     
                 <ul class="nav sidebar-nav">
 
@@ -29,8 +54,8 @@
                         <a class="dropdown-toggle"  data-toggle="dropdown">2D</a>
                         <ul class="dropdown-menu animated fadeInLeft" role="menu">
                             <li><div class="dropdown-header"><a href="posters.html">Posters</a></div></li>
-                            <!-- <li><div class="dropdown-header"><a href="2d.html">Drawings</a></div></li> -->
-                            <li class="dropdown">
+                            <li><div class="dropdown-header"><a href="2d.html">Drawings</a></div></li>
+                            <!-- <li class="dropdown">
                                 <div class="dropdown-header">
                                     <a class="dropdown-toggle"  data-toggle="subdropdown">Drawings</a>
                                 </div>
@@ -38,9 +63,9 @@
                                     <li><div class="dropdown-header sub"><a href="2d_squareheads.html">Squareheads</a></div></li>
                                     <li><div class="dropdown-header sub"><a href="2d_drawings.html">Paper</a></div></li>
                                 </ul>
-                            </li>
-                            <!-- <li><div class="dropdown-header"><a href="collages.html">Collages</a></div></li> -->
-                            <li class="dropdown">
+                            </li> -->
+                            <li><div class="dropdown-header"><a href="collages.html">Collages</a></div></li>
+                            <!-- <li class="dropdown">
                                 <div class="dropdown-header">
                                     <a class="dropdown-toggle"  data-toggle="subdropdown">Collages</a>
                                 </div>
@@ -49,7 +74,7 @@
                                     <li><div class="dropdown-header sub"><a href="collages_magazine.html">Magazine</a></div></li>
                                     <li><div class="dropdown-header sub"><a href="collages_dancers.html">Dancers</a></div></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             
                         </ul>
                     </li>
@@ -115,11 +140,15 @@
 
             <!-- Page Content -->
             <div id="page-content-wrapper">
+
+                <div class="right-side-image"></div>
+
                 <button type="button" class="hamburger animated fadeInLeft is-open" data-toggle="offcanvas">
                     <!-- <span class="hamb-top"></span>
                     <span class="hamb-middle"></span>
                     <span class="hamb-bottom"></span> -->
                 </button>
+
             
                 <div class="container pagecontent"></div>
             </div>

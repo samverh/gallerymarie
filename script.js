@@ -77,4 +77,28 @@ $(document).ready(function () {
       }
     });
 
+    // nested dropdowns
+    $(document).ready(function () {
+      // Enable dropdown and sub-dropdown toggle
+      $('.dropdown-toggle').on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const $el = $(this).next('.dropdown-menu');
+        const $parent = $(this).closest('.dropdown');
+
+        // Close any other open sub-dropdowns
+        $parent.siblings('.dropdown').find('.dropdown-menu').removeClass('show');
+
+        // Toggle the dropdown or sub-dropdown
+        $el.toggleClass('show');
+      });
+
+      // Close dropdowns when clicking outside
+      $(document).on('click', function (e) {
+        $('.dropdown-menu').removeClass('show');
+      });
+    });
+
+
+
   });

@@ -1,6 +1,6 @@
 /* size of the navigation bar */
 :root {
-  --sidebar-width: 30%;
+  --sidebar-width: 20%;
   --sidebar-items-margin-top: 15%;
   --popup-width: 50%;
 }
@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
     /* background-color: #CFD8DC; */
     font-family:"Futura Book" !important;
-    font-weight: 100 !important;
+    font-weight: 20 !important;
     font-size: 13px;
 }
 
@@ -232,7 +232,7 @@ ul.exhibitions li {
     z-index: -1;
     height: 100%;
     width: 3px;
-    background-color: #1c1c1c;
+    background-color: #ec5353;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
@@ -306,46 +306,14 @@ ul.exhibitions li {
     margin: 0;
     border-radius: 0;
     border: none;
-    background-color: #222;
+    background-color: #1a1a1a;
     box-shadow: none;
 }
 .dropdown-menu.show {
     top: 0;
 }
 
-.subdropdown-header {
-  /* text-align: center; */
-  /* font-size: 1em; */
-  color: #ddd;
-  padding-top:0;
-  padding-bottom:0;
-  padding-left: 2;
-  margin:0;
-  /* background:#212531;
-  background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%); */
-}
-.sidebar-nav .subdropdown-menu {
-  position: relative;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  background-color: #222;
-  box-shadow: none;
-}
-.subdropdown-menu.show {
-  top: 0;
-}
-
-.sub {
-  color: #ddd;
-  padding-top:0;
-  padding-bottom:0;
-  /* padding-left: 5; */
-  margin-left:20px;
-  font-size: 0.75em;
-}
+/*  */
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
@@ -503,5 +471,45 @@ next:hover {
 }
 
 .pagecontent {
-    padding-top: 60px; /* Adjust this value based on your navbar height */
+    padding-top: 30px;
+    padding-bottom: 120px;
 }
+
+/* Left Navigation Button */
+.nav-button-left,
+.nav-button-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1px 9px;
+  background-color: #e6e6e6;
+  color: white;
+  border-radius: 50%;
+}
+
+.nav-button-left {
+  left: 30px;
+}
+
+.nav-button-right {
+  right: 30px;
+}
+
+.nav-button-left:hover,
+.nav-button-right:hover {
+  background-color: rgba(201, 201, 201, 0.9);
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
